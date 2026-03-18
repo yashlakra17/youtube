@@ -3,7 +3,7 @@ import { Heart, Share2, MessageCircle, Bell, Play } from "lucide-react";
 import "./Live.css";
 
 const Live = () => {
-  const [liveStreams, setLiveStreams] = useState([
+  const [liveStreams] = useState([
     {
       id: 1,
       title: "Jonathan Gaming",

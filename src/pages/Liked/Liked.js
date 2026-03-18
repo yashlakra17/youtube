@@ -1,22 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   Heart,
-  Trash2,
   Share2,
   Download,
   Play,
-  Filter,
   Grid3x3,
   List,
-  ChevronRight,
 } from "lucide-react";
 import "./Liked.css";
 
-const Liked = () => {
-  const [likedVideos, setLikedVideos] = useState([]);
-  const [viewMode, setViewMode] = useState("grid");
-  const [selectedFilter, setSelectedFilter] = useState("all");
-  const [toasts, setToasts] = useState([]);
 
   const mockLikedVideos = [
     {
@@ -101,15 +93,17 @@ const Liked = () => {
     },
   ];
 
-  useEffect(() => {
-    setLikedVideos(mockLikedVideos);
-  }, []);
+const Liked = () => {
+ const [likedVideos, setLikedVideos] = useState(mockLikedVideos);
+  const [viewMode, setViewMode] = useState("grid");
+  const [selectedFilter, setSelectedFilter] = useState("all");
+  const [toasts, setToasts] = useState([]);
 
-  const addToast = (message, type = "success") => {
+  function addToast(message, type = "success") {
     const id = Date.now();
     setToasts((prev) => [...prev, { id, message, type }]);
     setTimeout(() => removeToast(id), 4000);
-  };
+  }
 
   const removeToast = (id) => {
     setToasts((prev) => prev.filter((t) => t.id !== id));

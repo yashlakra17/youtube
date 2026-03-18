@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Menu,
   Search,
-  Mic,
   Plus,
   Link2,
   Bell,

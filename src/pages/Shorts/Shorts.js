@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import {
   Play,
   Pause,
@@ -93,6 +93,8 @@ const ShortsPage = () => {
 
   const short = shorts[currentShortIndex];
 
+
+  
   // Handle video play/pause
   useEffect(() => {
     if (videoRef.current) {
@@ -118,37 +120,45 @@ const ShortsPage = () => {
     return () => clearInterval(interval);
   }, [isPlaying]);
 
-  // Handle keyboard navigation
-  useEffect(() => {
-    const handleKeyPress = (e) => {
-      if (e.key === "ArrowUp") {
-        handleVideoChange(-1);
-      } else if (e.key === "ArrowDown") {
-        handleVideoChange(1);
-      } else if (e.key === " ") {
-        e.preventDefault();
-        setIsPlaying(!isPlaying);
-      } else if (e.key === "m" || e.key === "M") {
-        setIsMuted(!isMuted);
-      }
-    };
-    window.addEventListener("keydown", handleKeyPress);
-    return () => window.removeEventListener("keydown", handleKeyPress);
-  }, [isPlaying, isMuted, shorts.length]);
+const handleVideoChange = useCallback((direction) => {
+  setIsTransitioning(true);
 
-  const handleVideoChange = (direction) => {
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentShortIndex((prev) => {
-        let newIndex = prev + direction;
-        if (newIndex < 0) newIndex = shorts.length - 1;
-        if (newIndex >= shorts.length) newIndex = 0;
-        return newIndex;
-      });
-      setIsPlaying(true);
-      setIsTransitioning(false);
-    }, 300);
+  setTimeout(() => {
+    setCurrentShortIndex((prev) => {
+      let newIndex = prev + direction;
+
+      if (newIndex < 0) newIndex = shorts.length - 1;
+      if (newIndex >= shorts.length) newIndex = 0;
+
+      return newIndex;
+    });
+
+    setIsPlaying(true);
+    setIsTransitioning(false);
+  }, 300);
+}, [shorts.length]);
+
+useEffect(() => {
+  const handleKeyPress = (e) => {
+    if (e.key === "ArrowUp") {
+      handleVideoChange(-1);
+    } else if (e.key === "ArrowDown") {
+      handleVideoChange(1);
+    } else if (e.key === " ") {
+      e.preventDefault();
+      setIsPlaying((prev) => !prev); 
+    } else if (e.key === "m" || e.key === "M") {
+      setIsMuted((prev) => !prev); 
+    }
   };
+  window.addEventListener("keydown", handleKeyPress);
+
+  return () => {
+    window.removeEventListener("keydown", handleKeyPress);
+  };
+}, [handleVideoChange]); 
+
+  
 
   const goToPreviousShort = () => handleVideoChange(-1);
   const goToNextShort = () => handleVideoChange(1);

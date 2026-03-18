@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Download, Trash2, Play, Wifi, WifiOff, HardDrive, MoreVertical } from 'lucide-react';
+import { useState } from 'react';
+import { Trash2, Play, HardDrive, MoreVertical } from 'lucide-react';
 import './Downloads.css';
 
 const Downloads = () => {

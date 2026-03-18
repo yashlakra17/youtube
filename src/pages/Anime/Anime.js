@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import "./Anime.css";
 const Anime = () => {
-  const [selectedGenre, setSelectedGenre] = useState("all");
+  // const [selectedGenre, setSelectedGenre] = useState("all");
   const [expandedSections, setExpandedSections] = useState({});
   const [likedAnime, setLikedAnime] = useState(new Set());
   const [bookmarkedAnime, setBookmarkedAnime] = useState(new Set());

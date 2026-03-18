@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Search,
-  ChevronRight,
   Heart,
   Share2,
   Play,
-  Zap,
   TrendingUp,
   Sparkles,
 } from "lucide-react";
