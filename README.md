@@ -10,7 +10,7 @@
 [![React](https://img.shields.io/badge/React-18.0+-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-[View Live](#-live-demo) • [Features](#-key-features) • [Installation](#-installation) • [Documentation](#-documentation) • [Support](#-support)
+[View Live][(#-live-demo](https://youtube-seven-ashen.vercel.app/)) • [Features](#-key-features) • [Installation](#-installation) • [Documentation](#-documentation) • [Support](#-support)
 
 </div>
 
