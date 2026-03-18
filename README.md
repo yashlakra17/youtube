@@ -5,12 +5,12 @@
 ### A Production-Ready YouTube Clone Built with React & Modern UI/UX
 **Experience Netflix-quality video streaming with professional player controls**
 
-[![Live Demo](https://img.shields.io/badge/🎬%20LIVE%20DEMO-Visit%20Now-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://your-youtube-clone-deployed.com)
+[![Live Demo](https://img.shields.io/badge/🎬%20LIVE%20DEMO-Visit%20Now-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube-seven-ashen.vercel.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-000000?style=for-the-badge&logo=github)](https://github.com/your-username/youtube-clone)
 [![React](https://img.shields.io/badge/React-18.0+-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-[View Live](#-live-demo) • [Features](#-key-features) • [Installation](#-installation) • [Documentation](#-documentation) • [Support](#-support)
+[View Live]([#-live-demo](https://youtube-seven-ashen.vercel.app/)) • [Features](#-key-features) • [Installation](#-installation) • [Documentation](#-documentation) • [Support](#-support)
 
 </div>
 
