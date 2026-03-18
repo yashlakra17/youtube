@@ -1,0 +1,69 @@
+/* ============================================
+   THEME VARIABLES
+   ============================================ */
+
+:root {
+  /* DARK MODE (Default) */
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #181818;
+  --bg-tertiary: #272727;
+  --border-color: #303030;
+  --text-primary: #ffffff;
+  --text-secondary: #aaaaaa;
+  --text-hover: #f1f1f1;
+  --accent-red: #ff0000;
+  --accent-blue: #065fd4;
+  --accent-green: #00a854;
+  --accent-orange: #ff6b35;
+  --accent-purple: #9b59b6;
+  --accent-cyan: #00d9ff;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-gaming: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-music: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-sports: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  --gradient-trending: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* LIGHT MODE */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9f9f9;
+    --bg-tertiary: #f0f0f0;
+    --border-color: #e0e0e0;
+    --text-primary: #030303;
+    --text-secondary: #606060;
+    --text-hover: #030303;
+  }
+}
+
+/* THEME TOGGLE SUPPORT */
+html[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9f9f9;
+  --bg-tertiary: #f0f0f0;
+  --border-color: #e0e0e0;
+  --text-primary: #030303;
+  --text-secondary: #606060;
+}
+
+html[data-theme="dark"] {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #181818;
+  --bg-tertiary: #272727;
+  --border-color: #303030;
+  --text-primary: #ffffff;
+  --text-secondary: #aaaaaa;
+}
